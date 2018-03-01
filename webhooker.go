@@ -99,8 +99,8 @@ func handler(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-  //Netflow Analyzer SAMPLE
-	str := fmt.Sprintln("Netflow Analyzer") + "[info]" + fmt.Sprint("Title: ") + fmt.Sprintln(jsonBody["title"]) + fmt.Sprint("State: ") + fmt.Sprintln(jsonBody["state"]) + fmt.Sprint("Message: ") + fmt.Sprintln(jsonBody["message"]) + "[/info]" + fmt.Sprintln(`http://10.14.0.200:3000/dashboard/db/arptable-conoha2`)
+  //Grafana -> Chatwork webhook SAMPLE
+	str := fmt.Sprintln("Grafana Alert") + "[info]" + fmt.Sprint("Title: ") + fmt.Sprintln(jsonBody["title"]) + fmt.Sprint("State: ") + fmt.Sprintln(jsonBody["state"]) + fmt.Sprint("Message: ") + fmt.Sprintln(jsonBody["message"]) + "[/info]" + fmt.Sprintln(`http://localhost:3000/dashboard/db/test`)
 	curl_post(str)
 }
 
